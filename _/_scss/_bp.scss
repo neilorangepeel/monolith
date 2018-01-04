@@ -1,0 +1,20 @@
+@mixin bp($point) {
+  @if $point == minL {
+    @media (min-width: 1300px) { @content; }
+  }
+  @if $point == L {
+    @media (max-width: 1300px) { @content; }
+  }
+  @if $point == M {
+    @media (max-width: 60em) { @content; }
+  }
+  @if $point == S {
+    @media (max-width: 40em) { @content; }
+  }
+  @if $point == wpSm {
+    @media (max-width: 782px) { @content; }
+  }
+  @if $point == wpXSm {
+    @media (max-width: 600px) { @content; }
+  }
+}

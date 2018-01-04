@@ -1,0 +1,146 @@
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:700|Merriweather:400,400italic,700,700italic);
+@font-face {
+    font-family: 'icons';
+    src: url('_/_type/tinktankicons.woff') format('woff'),
+         url('_/_type/tinktankicons.ttf') format('truetype');
+}
+html {
+    font: normal 62.5%/1.8 sans-serif;
+    @include bp (S) {
+    font: normal 50%/1.8 sans-serif;
+    }
+}
+@mixin josefin {
+    text-transform: uppercase;
+    font-family: "Josefin Sans", Futura, Helvetica, Arial, san-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+body {
+    font-size: 1.8em;
+    font-family: 'Merriweather', Georgia, serif;
+    color: $darkGray;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 1.8rem;
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2.6rem;
+}
+h3 {
+    font-size: 2.3rem;
+}
+h4{
+    font-size: 2.1rem;
+}
+h5 {
+    font-size: 1.8rem;
+}
+h6 {
+    font-size: 1.6rem;
+}
+p {
+    margin-bottom: 1.8rem;
+}
+p+h1, 
+p+h2, 
+p+h3, 
+p+h4, 
+p+h4,
+p+h5,
+p+h6 {
+    margin-top: 3.6rem;
+}
+a {
+    color: $accent;
+    text-decoration: none;
+    @include transition;
+    &:hover,
+    &:focus {
+        color: $darkGray;
+    }
+}
+ul, ol {
+    margin-bottom: 1.8rem;
+    padding-left: 2rem;
+}
+ul ul,
+ol ol, 
+ul ol,
+ol ul {
+    padding-left: 4rem;
+}
+ul ul, 
+ol ol, 
+ul ol, 
+ol ul {
+    margin-bottom: 0;
+}
+blockquote {
+    width: 120%;
+    margin: 3.6rem 0 3.6rem -10%;
+    padding-left: $padding/3;
+    border-left: 2px solid $accent;
+    font-size: 2.4rem;
+    font-style: italic;
+    clear: both;
+    @include bp (M) {
+        width: 100%;
+        margin: 3rem 0;
+        line-height: 1.6;
+    }
+}
+[data-icon]::before {
+    position: relative;
+    content: attr(data-icon);
+    font-family: 'icons';
+    font-weight: 400 !important;
+    font-style: normal;
+    text-transform: none;
+    line-height: 0;
+}
+code {
+    background: white;
+    border: 1px solid $gray;
+    padding: 1rem 2rem;
+    display: inline-block;
+    margin-bottom: 1.8rem;
+}
+
+//---------------------------- INPUTS + FORMS
+input, textarea {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 100%;
+    font: inherit;
+    background: white;
+    border: 1px solid $gray;
+}
+input[type="submit"] {
+    border: none;
+    background: $accent;
+    color: white;
+    @include transition;
+    &:hover, &:focus {
+        background: $darkGray;
+        cursor: pointer;
+    }
+}
+::-webkit-input-placeholder {
+   color: inherit;
+}
+:-moz-placeholder {
+   color: inherit;  
+}
+::-moz-placeholder {
+   color: inherit;  
+}
+:-ms-input-placeholder {  
+   color: inherit;  
+}

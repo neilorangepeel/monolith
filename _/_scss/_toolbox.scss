@@ -1,0 +1,27 @@
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.visuallyhidden { 
+    position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height: 1px; 
+    width: 1px; 
+    margin: -1px; 
+    padding: 0; 
+    border: 0;
+}
+.alignleft {
+  float: left;
+}
+.alignright {
+  float: right;
+}
+.aligncenter {
+  margin: 0 auto;
+}
+@mixin transition {
+  transition: all 0.3s ease; 
+}
